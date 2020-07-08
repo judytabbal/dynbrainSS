@@ -7,11 +7,11 @@
 All you need to de is to: 
 - Download and unpack all source code provided here
 - Add them (folders and subfolders) into your MATLAB path
-- Download fieldtrip package from our project release (link), but DO NOT manually add fieldtrip to your MATLAB path, ft_defaults will be added automatically by code
+- Download fieldtrip package from our project release [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0), but DO NOT manually add fieldtrip to your MATLAB path, ft_defaults will be added automatically by code
 - Donwload and unpack HCP data from (link) in cas you wish to test HCP data results
 
 ## Manual Guide
-A pdf for 'dynbrainSS manual' is available in [release](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0) as a simple step-by-step guide for interface use.
+A pdf for 'dynbrainSS manual' is available in the [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0) as a simple step-by-step guide for interface use.
 
 ## Results Examples
 - Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article (link), refer for more details). 
