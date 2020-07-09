@@ -14,5 +14,5 @@ All you need to do is to:
 A pdf for 'dynbrainSS manual' is available in the [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0) as a simple step-by-step guide for interface use.
 
 ## Results Examples
-- Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article, refer for more details). 
+- Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article, refer for more details) are available in the [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0). 
 - These figures can be opened in MATLAB software and allow a good 3D interactive visualisation of brain networks.
