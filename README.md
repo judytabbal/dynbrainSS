@@ -1,18 +1,18 @@
 # dynbrainSS
 
 ## Description
-'dynbrainSS' is a MATLAB gui interface that allow users to test and compare different Source Separation (SS) methods performance in dynamic functional connectivity context, in order to track spatiotemporal activity of brain networks.
+'dynbrainSS' is a MATLAB gui interface that allow users to test and compare different Source Separation (SS) methods performance in dynamic functional connectivity context, in order to track spatiotemporal activity of brain networks. This gui is built based on the study of our article titled "Dynamics of task-related electrophysiological networks: a benchmarking study".
 
 ## Installation
-All you need to de is to: 
+All you need to do is to: 
 - Download and unpack all source code provided here
 - Add them (folders and subfolders) into your MATLAB path
 - Download fieldtrip package from our project release [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0), but DO NOT manually add fieldtrip to your MATLAB path, ft_defaults will be added automatically by code
-- Donwload and unpack HCP data from (link) in cas you wish to test HCP data results
+- Donwload and unpack HCP data from (link) in case you wish to test HCP data results
 
 ## Manual Guide
 A pdf for 'dynbrainSS manual' is available in the [release here](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0) as a simple step-by-step guide for interface use.
 
 ## Results Examples
-- Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article titled "Dynamics of task-related electrophysiological networks: a benchmarking study", refer for more details). 
+- Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article, refer for more details). 
 - These figures can be opened in MATLAB software and allow a good 3D interactive visualisation of brain networks.
