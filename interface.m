@@ -115,17 +115,17 @@ NICs=str2num(get(handles.editNICs,'String'));
 % change the below line to your corresponding path
 global files_base
 files_base = 'F:\';
-files_base2 = 'C:\Users\Win10User\Desktop\PhD\Softwares\Matlab';
+files_base2 = 'C:\Users\Win10User\Desktop\PhD\Softwares\Matlab\';
 
 subject1 = { '104012'; '105923' ; '106521' ; '108323' ; '109123'; '113922' ; '116726' ; '125525'; '133019'; '140117'; '151526'; '153732'; '156334'; '162026'; '162935'; '164636'; '169040'; '175237'; '177746'; '185442'; '189349'; '191033'; '191437'; '191841'; '192641'; '198653'; '200109'; '204521'; '205119'; '212318'; '212823'; '221319' ; '250427' ; '255639' ; '257845'; '283543' ; '287248' ; '293748'; '353740'; '358144'; '406836'; '500222'; '559053'; '568963'; '581450'; '599671'; '601127' ; '660951' ; '662551' ; '667056'; '679770' ; '680957' ; '706040'; '707749'; '725751'; '735148'; '783462'; '814649'; '891667'; '898176'; '912447' };
 for i=1:length(subject1)
-    cmat_list{i} = [files_base 'Motor_HCP-LH\' subject1{i} '_LH1-30100_alldemo.mat'];  
+    cmat_list{i} = [files_base '2-Motor_HCP-LH\' subject1{i} '_LH1-30100_alldemo.mat'];  
 end
 
 tmp = which('ft_defaults');
 if isempty(tmp)
     % change the below line to wherever your copy of fieldtrip resides
-    addpath([files_base2 '\fieldtrip-20190224']);
+    addpath([files_base2 'fieldtrip-20190224']);
     ft_defaults
 end
 
@@ -779,7 +779,7 @@ set(handles.msgUp,'visible','off')
     data_nb=2;
     subject2 = { '104012'; '105923' ; '106521' ; '108323' ; '109123'; '113922' ; '116726' ; '125525'; '133019'; '140117'; '151526'; '153732'; '156334'; '162026'; '162935'; '164636'; '169040'; '175237'; '177746'; '185442'; '189349'; '191033'; '191437'; '191841'; '192641'; '198653'; '200109'; '204521'; '205119'; '212318'; '212823'; '221319' ; '250427' ; '255639' ; '257845'; '283543' ; '287248' ; '293748'; '353740'; '358144'; '406836'; '500222'; '559053'; '568963'; '581450'; '599671'; '601127' ; '660951' ; '662551' ; '667056'; '679770' ; '680957' ; '706040'; '707749'; '725751'; '735148'; '783462'; '814649'; '891667'; '898176'; '912447' };
     for i=1:length(subject2)
-        cmat_list{i} = [files_base '\Motor_HCP-LH\' subject2{i} '_LH1-30100_alldemo.mat'];  
+        cmat_list{i} = [files_base '2-Motor_HCP-LH\' subject2{i} '_LH1-30100_alldemo.mat'];  
     end
 
 % --- Executes during object creation, after setting all properties.
