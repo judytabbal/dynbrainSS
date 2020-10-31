@@ -119,7 +119,7 @@ files_base2 = 'C:\Users\Win10User\Desktop\PhD\Softwares\Matlab\';
 
 subject1 = { '104012'; '105923' ; '106521' ; '108323' ; '109123'; '113922' ; '116726' ; '125525'; '133019'; '140117'; '151526'; '153732'; '156334'; '162026'; '162935'; '164636'; '169040'; '175237'; '177746'; '185442'; '189349'; '191033'; '191437'; '191841'; '192641'; '198653'; '200109'; '204521'; '205119'; '212318'; '212823'; '221319' ; '250427' ; '255639' ; '257845'; '283543' ; '287248' ; '293748'; '353740'; '358144'; '406836'; '500222'; '559053'; '568963'; '581450'; '599671'; '601127' ; '660951' ; '662551' ; '667056'; '679770' ; '680957' ; '706040'; '707749'; '725751'; '735148'; '783462'; '814649'; '891667'; '898176'; '912447' };
 for i=1:length(subject1)
-    cmat_list{i} = [files_base '2-Motor_HCP-LH\' subject1{i} '_LH1-30100_alldemo.mat'];  
+    cmat_list{i} = ['E:\HCP-LH1-IAC\' subject{sub_ind} '_inst_orth_beta_alldemo.mat'];
 end
 
 tmp = which('ft_defaults');
@@ -181,11 +181,11 @@ global disp_concat
 global thresh
 
 if(data_nb==1)
-    benf_fact=2*NICs*8; % 2 tails x 10 ICs x 8 DOFs
+    benf_fact=2*NICs*8; % 2 tails x NIC ICs x 8 DOFs
 elseif(data_nb==2)
-    benf_fact=2*NICs*6; % 2 tails x 10 ICs x 6 DOFs
+    benf_fact=2*NICs*8; 
 elseif(data_nb==3)
-    benf_fact=2*NICs*12; % 2 tails x 10 ICs x 12 DOFs
+    benf_fact=2*NICs*12; % 2 tails x NIC ICs x 12 DOFs
 elseif(data_nb==5)
     benf_fact=2*NICs*8;
 end
@@ -390,6 +390,14 @@ case 1
         cfg.val= 1; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
         timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 1; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
+        timeElapsed= toc;
     else
         cfg             = [];
         cfg.NICs        = NICs;
@@ -412,6 +420,14 @@ case 2
         cfg.val= 2; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
         timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 2; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
+        timeElapsed= toc;
     else    
         cfg             = [];
         cfg.NICs        = NICs;
@@ -432,6 +448,14 @@ case 3
         tic
         cfg.val= 3; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
+        timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 3; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
         timeElapsed= toc;
     else    
         cfg             = [];
@@ -455,6 +479,14 @@ case 4
         cfg.val= 4; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
         timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 4; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
+        timeElapsed= toc;
     else    
         cfg             = [];
         cfg.NICs        = NICs;
@@ -477,6 +509,14 @@ case 5
         cfg.val= 5; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
         timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 5; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
+        timeElapsed= toc;
     else    
         cfg             = [];
         cfg.NICs        = NICs;
@@ -498,6 +538,14 @@ case 6
         cfg.val= 6; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
         results= go_decomposeConnectome_general_sim_ica(cfg); %all
         timeElapsed= toc;
+      elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        cfg.val= 6; % 1=jade, 2=infomax, 3=sobi, 4=fastica, 5=com2, 6=psaud
+        results= go_decomposeConnectome_general_ica_HCPinst(cfg); %all
+        timeElapsed= toc;
     else      
         cfg             = [];
         cfg.NICs        = NICs;
@@ -518,6 +566,13 @@ case 7
         tic
         results= go_decomposeConnectome_general_sim_pca(cfg); %all
         timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        results= go_decomposeConnectome_general_pca_HCPinst(cfg); %all
+        timeElapsed= toc;
     else    
         cfg             = [];
         cfg.NICs        = NICs;
@@ -536,6 +591,13 @@ case 8
         cfg.time_wind        = time_wind;
         tic
         results= go_decomposeConnectome_general_sim_nmf(cfg); %all
+        timeElapsed= toc;
+     elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        results= go_decomposeConnectome_general_nmf_HCPinst(cfg); %all
         timeElapsed= toc;
     else     
         cfg             = [];
@@ -556,6 +618,13 @@ case 9
         cfg.val= 1; % 1=Sample_init, 2=Plus_init
         tic
         results= go_decomposeConnectome_general_sim_kmeans(cfg); %all
+        timeElapsed= toc;
+      elseif(data_nb==2)
+        cfg             = [];
+        cfg.NICs        = NICs;
+        cfg.data        = cmat_list;
+        tic
+        results= go_decomposeConnectome_general_Kmeans_HCPinst(cfg); %all
         timeElapsed= toc;
     else    
         cfg             = [];
