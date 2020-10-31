@@ -1,7 +1,7 @@
 # dynbrainSS
 
 ## Description
-'dynbrainSS' is a MATLAB gui interface that allow users to test and compare different Source Separation (SS) methods performance in dynamic functional connectivity context, in order to track spatiotemporal activity of brain networks during tasks. This gui is built based on the study of our article titled "Dynamics of task-related electrophysiological networks: a benchmarking study".
+'dynbrainSS' is a MATLAB gui interface that allow users to test and compare different Source Separation (SS) methods performance in dynamic functional connectivity context, in order to track spatiotemporal activity of brain networks during tasks. This gui is built based on the study of our article titled "Dynamics of task-related electrophysiological networks: a benchmarking study". Besides interface, a demo code version is available in the function: demo_dynBrainSS.m
 
 ## Installation
 All you need to do is to: 
