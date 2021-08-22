@@ -16,3 +16,6 @@ A pdf for 'dynbrainSS manual' is available in the [release here](https://github.
 ## Results Examples
 - Some MATLAB Figures for an example of ICA-JADE method application on dynamic functional connectivity of MEG data during motor and working memory tasks (used and described in our article, refer for more details) are available in the [release](https://github.com/judytabbal/dynbrainSS/releases/tag/v1.0). 
 - These figures can be opened in MATLAB software and allow a good 3D interactive visualisation of brain networks.
+
+## Reference
+Tabbal, Judie, et al. "Dynamics of task-related electrophysiological networks: a benchmarking study." NeuroImage 231 (2021): 117829.
